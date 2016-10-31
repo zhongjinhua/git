@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	*{
+		margin: 0px;
+		padding: 0px;
+	}
+	.div1{
+		width: 0px;
+		height: 0px;
+		border-top:30px solid rgba(0,0,0,0); 
+		border-right:30px solid rgba(0,0,0,0); 
+		border-bottom:30px solid rgba(0,0,0,0); 
+		border-left:30px solid green; 
+	}
+	a:link{
+		color: blue;
+	}
+	a:visited{
+		color: red;
+	}
+	a:hover{
+		color:#2C9321;
+	}
+	a:active{
+		color:#F0E618 ;
+	}
+	li{
+		width: 100px;
+		height: 100px;
+		background: #37D5D7;
+		margin: 30px;
+		list-style: none;
+		color: #fff;
+		line-height: 100px;
+		text-align: center;
+		float: left;
+	}
+	ol{
+		overflow: hidden;
+	}
+	li:hover{
+		color: red;
+		background: #55E325;
+	}
+	img{
+		display: none;
+	}
+	.div2:hover img{
+		display: block;
+	}
+	.mask{
+		width: 12px;
+		height: 12px;
+		background: #023c4d;
+		border-radius: 10px;
+		border: 1px solid #fff;
+		position: relative;
+	}
+	.div3{
+		width: 6px;
+		height: 6px;
+		background: #fff;
+		border-radius: 80px;
+		position: absolute;
+		left: 3px;
+		top: 3px;
+	}
+	
+	</style>
+</head>
+<body>
+	<div class="div1">	</div>
+	<a href="http://www.qq.com">百度</a>
+	<ol>
+		<li>123</li>
+		<li>123</li>
+		<li>123</li>
+		<li>123</li>
+	</ol>
+	<div class="div2">
+		<h2>图片</h2>
+		<img src="images/1_03.jpg" alt="糖">
+	</div>
+	<div class="mask">
+		<div class="div3"></div>
+	</div>
+	&#165;
+	
+</body>
+</html>
