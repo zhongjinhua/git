@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .outer{
+            width: 1000px;
+            height: 300px;
+            border: 2px solid blue;
+            margin: 30px auto;
+            position: relative;
+            overflow: hidden;
+        }
+        .inner{
+            width: 3000px;
+            height: 300px;
+            overflow: hidden;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            animation: move 5s linear infinite;
+            -webkit-animation: move 5s linear infinite;
+        }
+        @keyframes move {
+            0%{left: 0px;}
+            100%{left: -1000px;}
+        }
+        @-webkit-keyframes move {
+            0%{left: 0px;}
+            100%{left: -1000px;}
+        }
+        .inner img{
+            width: 200px;
+            height: 300px;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+<div class="outer">
+    <div class="inner">
+        <img src="image/1.jpg" alt="">
+        <img src="image/2.jpg" alt="">
+        <img src="image/3.jpg" alt="">
+        <img src="image/4.jpg" alt="">
+        <img src="image/5.jpg" alt="">
+        <img src="image/1.jpg" alt="">
+        <img src="image/2.jpg" alt="">
+        <img src="image/3.jpg" alt="">
+        <img src="image/4.jpg" alt="">
+        <img src="image/5.jpg" alt="">
+    </div>
+</div>
+    <h1>go</h1>
+    <h1>stop</h1>
+<script>
+    var div=document.getElementsByTagName('div')[1];
+    var outer=document.getElementsByTagName('div')[0];
+    function go(){
+        div.style.animationPlayState="running";
+        div.style.webkitAnimationPlayState="running";
+    }
+    function stop(){
+        div.style.animationPlayState="paused";
+        div.style.webkitAnimationPlayState="paused";
+    }
+    var h1s=document.getElementsByTagName("h1");
+    h1s[0].onclick=outer.onmouseout=go;
+    h1s[1].onclick=outer.onmouseover=stop;
+</script>
+</body>
+</html>

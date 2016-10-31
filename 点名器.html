@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>点名器</title>
+<style>
+	body{
+		background: #9DCBF2;
+	}
+	h1{
+		color: #EE163C;
+		text-align: center;
+		font-size: 80px;
+		cursor: pointer;
+	}
+	div{
+		text-align: center;
+		color: #F9F206; 
+		font-size: 100px;
+		font-weight: bold;
+	}
+</style>
+</head>
+<body>
+	<h1 id="tip">start</h1>
+	<div id="con">开始</div>
+<script>
+	var tip=document.getElementById('tip');
+	var con=document.getElementById('con');
+	var arr=['熊世昆','曾剑锋','胡冬俊','鲍建军','吴浛菲','江新丰','钟金花','刘淑金','熊永明','肖乐'];
+	var time=null;
+	var flag=0;
+	tip.onclick=function(){
+		if (flag==0) {
+			flag=1;
+			tip.innerHTML='stop'
+			time=setInterval(function(){
+				con.innerHTML=arr[Math.floor(Math.random()*arr.length)];
+			},50)
+		}else{
+			flag=0;
+			tip.innerHTML='start';
+			clearInterval(time);
+		}
+	}
+	document.onkeydown=function(){
+		if (flag==0) {
+			flag=1;
+			tip.innerHTML='stop'
+			time=setInterval(function(){
+				con.innerHTML=arr[Math.floor(Math.random()*arr.length)];
+			},50)
+		}else{
+			flag=0;
+			tip.innerHTML='start';
+			clearInterval(time);
+		}
+	}
+</script>
+</body>
+</html>
